@@ -1,0 +1,29 @@
+h1
+{
+    text-align: center;
+    color: #4CAF50;
+}
+
+
+#weather {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #weather td, #weather th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #weather tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #weather tr:hover {background-color: #ddd;}
+  
+  #weather th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

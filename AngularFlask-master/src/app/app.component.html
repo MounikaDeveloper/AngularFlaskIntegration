@@ -1,0 +1,70 @@
+<h1>Registration</h1>
+ <!--<form [formGroup]="registrationForm">-->
+<form (ngSubmit)="onSubmit()" [formGroup]="registrationForm" >
+<table>
+  <tr>
+    <th>Enter ID:</th>
+    <th><input type="number"  formControlName="id" class="form-control" required></th>
+  </tr>
+
+    <tr>
+    <th>Enter Name:</th>
+     <th><input type="text"  formControlName="name" class="form-control" required></th>
+  </tr>  <tr>
+    <th>Enter Email-ID:</th>
+     <th><input type="email"  formControlName="email" class="form-control" required></th>
+  </tr>
+</table>
+      <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+    <!--<button (click)="loadAPIData()" class="btn btn-secondary ml-2" type="button">Load API Data</button>-->
+</form>
+  {{registrationForm.status | json}}
+  {{registrationForm.value | json}}
+
+
+
+
+
+<h1>Angular Application</h1>
+<h3>Records in the Databse</h3>
+<table id="employee" border="1">
+        <tr>
+            <th *ngFor="let column of headers">
+                {{column}}
+            </th>
+        </tr>
+
+        <tr *ngFor="let row of employee">
+            <td *ngFor="let col of headers">
+                {{row[col]}}
+            </td>
+        </tr>
+
+</table>
+<hr>
+<!--<div *ngIf="errorMsg">{{errorMsg}}</div>-->
+<!--<form #userForm="ngForm" *ngIf="!submitted" novalidate (ngSubmit)="onSubmit()" >-->
+  <!--&lt;!&ndash;{{userForm.form.valid}}&ndash;&gt;-->
+  <!--&lt;!&ndash;{{userForm.value|json}}<hr>&ndash;&gt;-->
+  <!--&lt;!&ndash;{{userModel|json}}&ndash;&gt;-->
+<!--<table>-->
+  <!--<tr>-->
+    <!--<th>Enter ID:</th>-->
+    <!--<th><input type="number" required #name="ngModel" class="form-group"-->
+
+               <!--name="id" [(ngModel)]="userModel.id"></th>-->
+    <!--&lt;!&ndash;<th>{{name.classname}}</th>{{name.untouched}}&ndash;&gt;-->
+  <!--</tr>-->
+
+    <!--<tr>-->
+    <!--<th>Enter Name:</th>-->
+    <!--<th><input type="text" required #name="ngModel" name="name" [(ngModel)]="userModel.name" class="form-group"></th>-->
+  <!--</tr>  <tr>-->
+    <!--<th>Enter Email-ID:</th>-->
+    <!--<th><input type="email" required #name="ngModel" name="email" [(ngModel)]="userModel.email" class="form-group"></th>-->
+  <!--</tr>-->
+<!--</table>-->
+  <!--<button [disabled]="userForm.form.invalid" type="submit">Submit</button>-->
+  <!--</form>-->
+<!--{{registrationForm.status|json}}-->
+<!--{{registrationForm.value|json}}-->

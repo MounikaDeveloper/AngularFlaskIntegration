@@ -1,0 +1,23 @@
+<html>
+   <body>
+
+      <hr/>
+{##}
+{#      {%- for category, message in get_flashed_messages(with_categories = true) %}#}
+{#         <div class = "alert alert-danger">#}
+{#            {{ message }}#}
+{#         </div>#}
+{#      {%- endfor %}#}
+      {% if msg %}
+          <h3>{{ msg }}</h3>
+      {% endif %}
+
+      <form action = "" method = "post">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "email">EMail</label><br>
+         <input type = "text" name = "email" placeholder = "Email" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>
